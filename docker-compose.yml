@@ -1,0 +1,26 @@
+version: '2'
+services:
+  # redis:
+  #   image: redis
+
+  db:
+    image: "postgres:9.6"
+    volumes:
+      - ./cache/postgres:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+  web:
+    build: .
+    volumes:
+      - .:/app
+    links:
+      - db
+    env_file: .env
+    ports:
+      - "3000:80"
+    depends_on:
+      - db
+      # - redis
+    tty: true
+    stdin_open: true

@@ -1,0 +1,11 @@
+# Ignore builds
+/target
+**/*.rs.bk
+
+# Ignore environment files
+.env
+.env.*
+!.env.test
+
+# Ignore cached files
+/cache

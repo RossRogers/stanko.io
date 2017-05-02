@@ -1,0 +1,23 @@
+[package]
+name = "stanko_io"
+version = "0.1.0"
+authors = ["Stanko Krtalić <stanko.krtalic@gmail.com>"]
+
+[dependencies]
+serde = "0.9.5"
+serde_json = "0.9.3"
+serde_derive = "0.9"
+rustc-serialize = "0.3.24"
+rocket = "0.2.6"
+rocket_codegen = "0.2.6"
+rocket_contrib = { version = "0.2.6", default-features = false, features = ["json"] }
+juniper = { version = "0.7.0", features = ["serde"] }
+dotenv = "0.10.0"
+uuid = { version = "0.4.0", features = ["serde", "v4"] }
+chrono = "0.3.0"
+log = "0.3.7"
+log4rs = "0.6.2"
+diesel = { version = "0.12.0", features = ["postgres", "uuid", "chrono", "serde_json"] }
+diesel_codegen = { version = "0.12.0", features = ["postgres"] }
+r2d2 = "0.7.2"
+r2d2-diesel = "0.12.0"
